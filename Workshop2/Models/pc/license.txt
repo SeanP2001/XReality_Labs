@@ -1,0 +1,11 @@
+Model Information:
+* title:	Corsair 200R
+* source:	https://sketchfab.com/3d-models/corsair-200r-41efdc6e62454ec0a870ee8451768d75
+* author:	Nick (https://sketchfab.com/jeromy)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Corsair 200R" (https://sketchfab.com/3d-models/corsair-200r-41efdc6e62454ec0a870ee8451768d75) by Nick (https://sketchfab.com/jeromy) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

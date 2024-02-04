@@ -1,21 +1,74 @@
 <html>
     <head>
         <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>   <! -- Include aframe --> 
-
-        <script src="BasicAFrame.js" async></script>
     </head>
     <body>
         <a-scene>
-            <! -- Assets -->
-            
+            <!-- Assets -->
+            <a-assets>
+                <a-asset-item id="desk" src="./Models/desk/scene.gltf"></a-asset-item>
+                <a-asset-item id="bin" src="./Models/bin/scene.gltf"></a-asset-item>
+                <a-asset-item id="chair" src="./Models/chair/scene.gltf"></a-asset-item>
+                <a-asset-item id="monitor" src="./Models/monitor/scene.gltf"></a-asset-item>
+                <a-asset-item id="keyboard" src="./Models/keyboard/scene.gltf"></a-asset-item>
+                <a-asset-item id="mouse" src="./Models/mouse/scene.gltf"></a-asset-item>
+                <a-asset-item id="pc" src="./Models/pc/scene.gltf"></a-asset-item>
+                <a-asset-item id="3d-printer" src="./Models/3d_printer/scene.gltf"></a-asset-item>
+                <a-asset-item id="door" src="./Models/door/scene.gltf"></a-asset-item>
+                <a-asset-item id="shelves" src="./Models/shelves/scene.gltf"></a-asset-item>
+
+                <img id="desktop" src="Desktop.png">
+                <img id="desktop2" src="Desktop2.png">
+                <img id="window-frame" src="window-frame.png">
+                <img id="hills" src="hills.jpg">
+            </a-assets>
              
-            <! -- Objects -->
+            <!-- Furniture -->
+            <a-entity position="0.5 0 -0.6" gltf-model="#desk"></a-entity>
+            <a-entity position="0 0.6 0" rotation="0 180 0" gltf-model="#chair"></a-entity>
+            <a-entity position="-0.43 0 0" rotation="0 90 0" scale="1.8 2 1.5" gltf-model="#shelves"></a-entity>
+
+            <!-- Computer -->
+            <a-entity position="-0.55 1.1 -0.6" scale="0.065 0.065 0.065" rotation="0 -90 0" gltf-model="#pc"></a-entity>
+
+            <!-- Monitor 1 -->
+            <a-entity position="0 1.1 -0.8" rotation="0 -90 0" gltf-model="#monitor"></a-entity>
+            <a-image src="#desktop" position="0 1.1 -0.779" width="0.6" height="0.34" light="type: point; intensity: 0.25"></a-image>
+
+            <!-- Monitor 2 -->
+            <a-cylinder position="0.09 1.15 -0.92" radius="0.025" height="0.75" color="black"></a-cylinder>
+            <a-box position="0 1.48 -0.87" rotation="0 -55 0" depth="0.25" width="0.05" height="0.05" color="black"></a-box>
+            <a-box position="0 1.48 -0.78" depth="0.02" width="0.62" height="0.35" color="black"></a-box>
+            <a-image src="#desktop2" position="0 1.48 -0.769" width="0.6" height="0.3375" light="type: point; intensity: 0.25"></a-image>
             
+            <!-- Peripherals -->
+            <a-entity position="0 0.82 -0.5" gltf-model="#keyboard"></a-entity>
+            <a-entity position="0.2 0.82 -0.5" scale="0.01 0.01 0.01" gltf-model="#mouse"></a-entity>
             
-            <! -- Environment -->
-            <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-            <a-sky color="#ECECEC"></a-sky>   
-        
+            <!-- 3D Printer -->
+            <a-entity position="0.6 0.82 -0.7" scale="0.00015 0.00015 0.00015" gltf-model="#3d-printer"></a-entity>
+            
+            <!-- Environment -->
+            <a-sky color="#ECECEC" ></a-sky>   
+            <a-light type="ambient; intensity: 0.5"></a-light>
+
+            <!-- Room -->
+            <a-plane position="0 0 0" rotation="-90 0 0" width="4" height="4" color="#3d3d3d"></a-plane>    <!--Floor-->
+            <a-plane position="0 2.5 0" rotation="90 0 0" width="4" height="4" color="white"></a-plane>     <!--Ceiling-->
+
+            <a-plane position="1.5 2 0" rotation="0 -90 0" width="4" height="4" color="white"></a-plane>    <!--Right Wall-->
+            <a-plane position="0 2 -1.05" rotation="0 0 0" width="4" height="4" color="white"></a-plane>    <!--Front Wall-->
+            <a-plane position="-1 2 0" rotation="0 90 0" width="4" height="4" color="white"></a-plane>      <!--Left Wall-->
+            <a-plane position="0 2 1.5" rotation="0 180 0" width="4" height="4" color="white"></a-plane>    <!--Back Wall-->
+
+            <a-entity position="1 -0.1 1.5" scale="0.75 0.75 0.75" rotation="0 180 0" gltf-model="#door"></a-entity>
+
+            <a-entity geometry="primitive: cylinder" scale="0.1 0.1 0.1" position="0 2.3 0" material="color: white" light="type: point; intensity: 1; color: #ffd"></a-entity> <!--Lamp-->
+
+            <a-image src="#window-frame" position="1.498 1.5 0.1" rotation="0 -90 0"></a-image>
+            <a-image src="#hills" position="1.499 1.5 0.1" rotation="0 -90 0" material="transparent: false" light="type: point; intensity: 0.05"></a-image>
+
+
         </a-scene>
 
         

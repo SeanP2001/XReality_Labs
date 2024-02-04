@@ -1,0 +1,11 @@
+Model Information:
+* title:	IKEA BILLY SMALL
+* source:	https://sketchfab.com/3d-models/ikea-billy-small-f9f634dc02b34f3ba69b262754400720
+* author:	Cymen05 (https://sketchfab.com/Cymen05)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "IKEA BILLY SMALL" (https://sketchfab.com/3d-models/ikea-billy-small-f9f634dc02b34f3ba69b262754400720) by Cymen05 (https://sketchfab.com/Cymen05) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
