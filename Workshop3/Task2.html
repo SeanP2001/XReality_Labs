@@ -1,0 +1,27 @@
+<script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+<script src="https://raw.githack.com/jeromeetienne/AR.js/2.1.6/aframe/build/aframe-ar.js"></script>
+
+<body style='margin : 0px; overflow: hidden;'>
+     <!--Create a VR Environment, Embedded in the Page with AR.js Functionality-->
+     <a-scene embedded arjs>
+          <!--Load Assets-->
+          <a-assets>
+               <a-asset-item id="keyboard" src="./Models/keyboard/scene.gltf"></a-asset-item>
+          </a-assets>
+
+          <!--When the Hiro Marker is Detected-->
+          <a-marker preset="hiro">
+               <!--Place a Keyboard-->
+               <a-entity position="0 0 0" scale="5 5 5" gltf-model="#keyboard"></a-entity>
+          </a-marker>
+
+          <!--When the Kanji Marker is detected-->
+          <a-marker preset="kanji">
+               <!--Place a Red Box-->
+               <a-box position='0 0.5 0' material='color: red;'></a-box>
+          </a-marker>
+
+          <a-entity camera></a-entity>
+     </a-scene>
+</body>
+

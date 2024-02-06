@@ -1,0 +1,24 @@
+<script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+<script src="https://raw.githack.com/jeromeetienne/AR.js/2.1.6/aframe/build/aframe-ar.js"></script>
+
+<body style='margin: 0; overflow: hidden;'>
+     <!--
+          Create an A-Frame Scene With:
+          - No VR Mode UI Buttons
+          - AR.js Functionality With:
+               - A 1280x960p Webcam Feed
+               - A 1280x960p Window to Display the Feed
+               - No Debugging Interface
+     -->
+     <a-scene vr-mode-ui="enabled: false" embedded arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
+          
+          <!--Draw a Yellow Box at Llandudno's Location-->
+          <a-box color="yellow" gps-entity-place="latitude: 53.3241; longitude: 3.8276"/>
+
+          <!--Create an A-Frame Camera Which Uses the Device GPS and Rotational Data to Determine Position-->
+          <a-camera gps-camera rotation-reader>
+          </a-camera>
+          
+     </a-scene>
+ </body>
+
